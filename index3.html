@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const grades = [];
+
+      while (true) {
+        const userInput = parseInt(prompt("Enter a number (or -99 to exit):"));
+
+        if (userInput === -99) {
+          break;
+        }
+
+        grades.push(userInput);
+      }
+
+      for (let element in grades) {
+      }
+
+      grades.filter((element) => element < 0 || element > 100);
+      grades.forEach(element);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const a = [];
+
+      for (let i = 0; i < 4; i++) {
+        const num = parseInt(prompt(`enter a number #${i}`));
+        a.push(num);
+      }
+
+      console.log(a);
+
+      function hrPrint(element, index, arr) {
+        const colorStyle =
+          index == 0
+            ? "color: green"
+            : index == arr.length - 1
+            ? "color: pink"
+            : "color: green";
+        const mainElement = index == 0 ? "b" : "div";
+
+        document.write(`
+        <hr>
+        <${mainElement} style="${colorStyle}">${element}</${mainElement}>
+        <div style="color: blue"> index: #${index}</div>
+        <div style="color: red"> array: ${arr}</div>
+        <br/>
+    `);
+      }
+
+      a.forEach(hrPrint);
+    </script>
+  </body>
+</html>
