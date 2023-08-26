@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var A = 5;
+      var B = 3;
+      var C = 19;
+      var D = -2;
+      var X = 4;
+      var Y = 1;
+
+      console.log(5 * 4 + 2 * (3 + 3 + 4)); // Output: 40
+      console.log(5 * (X * 2) * 3 * (B + 4)); // Output: 840
+      console.log(A == (B = 5 * 5 + Y)); // Output: false
+      console.log((A += X + 5 + A - Y)); // Output: 18
+      console.log(A != (C *= -D + A)); // Output: true
+      console.log((A *= A + (7 - X - D + 3))); // Output: 65
+      console.log((A %= D++)); // Output: 1
+      console.log((A %= ++D)); // Output: 0
+      console.log(X++ * (A + C) + A++); // Output: 101
+      console.log(A-- + X * (B < A) + Y * !(B < C) + (5 % 2)); // Output: 10
+      console.log(!(X - D + C) || (D + B + A && D++)); // Output: -2
+      console.log((A && C) || (!0 && A && !D)); // Output: 19
+      console.log((((A && B) || (!0 && C)) && !D) || A || (B && Y)); // Output: 5
+      console.log((((A && C) || !0) && C && !D && !A) || !B); // Output: false
+
+      Ex5;
+    </script>
+  </body>
+</html>
