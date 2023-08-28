@@ -100,9 +100,9 @@
 
       // Random 100 , 1 - 10:
 
-      const randomNumsArray = new Array(100).map(
-        () => Math.floor(Math.random() * 10) + 1
-      );
+      const randomNumsArray = new Array(100)
+        .fill()
+        .map(() => Math.floor(Math.random() * 10) + 1);
 
       console.log(randomNumsArray);
     </script>
