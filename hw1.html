@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework1</title>
+  </head>
+  <body>
+    <script>
+      const rnd_list = [];
+
+      for (let i = 0; i < 10; i++) {
+        rnd_list.push(Math.floor(Math.random() * 7) + 1);
+      }
+
+      // a.
+      rnd_list.forEach((num) => document.write(num + "<br>"));
+
+      document.write("<br>");
+
+      // b.
+      for (let number of rnd_list) {
+        document.write(`${number} <br>`);
+      }
+
+      // c.
+      const sum = rnd_list.reduce((acc, num) => acc + num, 0);
+      document.write("Sum: " + sum);
+
+      // d.
+      const newList = rnd_list.filter((num) => num < 5);
+      console.log(newList);
+
+      // e.
+      const powArr = rnd_list.map((num) => Math.pow(num, 2));
+      console.log(powArr);
+
+      // f.
+      const daysArr = rnd_list.map((num) => {
+        switch (num) {
+          case 1:
+            return "Sunday";
+          case 2:
+            return "Monday";
+          case 3:
+            return "Tuesday";
+          case 4:
+            return "Wednesday";
+          case 5:
+            return "Thursday";
+          case 6:
+            return "Friday";
+          case 7:
+            return "Saturday";
+          default:
+            return "Invalid day";
+        }
+      });
+
+      console.log(daysArr);
+    </script>
+  </body>
+</html>

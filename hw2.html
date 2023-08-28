@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework2</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 3px solid rgb(167, 111, 235);
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table style="width: 5%" id="table"></table>
+    <script>
+      // Names in a table:
+
+      const table = document.getElementById("table");
+
+      const names = [
+        "Emily",
+        "Liam",
+        "Sophia",
+        "Noah",
+        "Olivia",
+        "Ethan",
+        "Ava",
+        "Jackson",
+        "Isabella",
+        "Aiden",
+      ];
+
+      names.forEach((name) => {
+        const tr = document.createElement("tr");
+
+        const td = document.createElement("td");
+        td.textContent = name;
+
+        tr.appendChild(td);
+
+        table.appendChild(tr);
+      });
+
+      // Names with 4 Or more letters:
+
+      const namesWith4OrMore = names.filter((name) => name.length >= 4);
+
+      document.write(
+        `<br>Names with 4 or more letters: ${namesWith4OrMore}<br>`
+      );
+
+      // Names with 4 letters:
+
+      const namesWith4 = names.filter((name) => name.length === 4);
+
+      document.write(`<p>Names with 4 letters: ${namesWith4}</p>`);
+
+      // reshima meshursheret:
+
+      document.write(`<div>Reshima meshursheret:</div>`);
+      const namesDiv = document.createElement("div");
+      const glueArray = [];
+
+      names.forEach((name) => {
+        glueArray.push(name);
+      });
+
+      namesDiv.textContent = glueArray.join("");
+
+      document.body.appendChild(namesDiv);
+
+      // Name Lengths:
+
+      const nameLengths = names.map((name) => name.length);
+
+      document.write(`<br>${nameLengths}<br>`);
+
+      // Name First Letter:
+
+      const firstLetters = names.map((name) => ` "${name.charAt(0)}" `);
+
+      document.write(`<br>${firstLetters}`);
+
+      // Names with E:
+
+      const namesWithE = names.filter((name) => name.indexOf("E") !== -1);
+
+      document.write(namesWithE);
+
+      // Bonus:
+
+      // Is at least 8?:
+
+      const atLeast8 = (name) => name.length >= 8;
+
+      console.log(names.some(atLeast8));
+
+      // Random 100 , 1 - 10:
+
+      const randomNumsArray = new Array(100).map(
+        () => Math.floor(Math.random() * 10) + 1
+      );
+
+      console.log(randomNumsArray);
+    </script>
+  </body>
+</html>
